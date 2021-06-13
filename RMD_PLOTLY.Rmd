@@ -1,0 +1,51 @@
+---
+title: "R Markdown and plotly assignment"
+author: "JMTX"
+date: "`r format(Sys.time(), '%d/%m/%y')`"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#load the libraries
+```
+
+## Synopsis
+
+This work consists in building a graph with plotly in an html presentation document. I choose to reproduce the minimal example using the iris dataset.
+
+remark: the date is in french format day/month/year
+
+
+## Plot with Iris dataset
+The code for this plot can be found in the next slide
+```{r graph1,warning=FALSE,message = FALSE,echo = FALSE}
+#load the libraries
+library(ggplot2)
+library(plotly)
+
+
+#load the iris dataset
+data(iris)
+
+#plot
+plot_ly(data = iris,x=~ Sepal.Length, y=~ Sepal.Width, type = "scatter",
+        mode = "markers", color = iris$Species )
+```
+
+## Code for the previous plot
+```{r code_graph1,warning=FALSE,message = FALSE,eval= FALSE}
+#load the libraries
+library(ggplot2)
+library(plotly)
+
+#load the iris dataset
+data(iris)
+
+#plot the iris dataset
+plot_ly(data = iris,x=~ Sepal.Length, y=~ Sepal.Width, type = "scatter",
+        mode = "markers", color = iris$Species )
+```
+
+
+
