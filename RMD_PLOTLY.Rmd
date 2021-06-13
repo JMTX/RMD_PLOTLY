@@ -42,7 +42,7 @@ library(plotly)
 #load the iris dataset
 data(iris)
 
-#plot
+#plot iris dataset
 plot_ly(data = iris,x=~ Sepal.Length, y=~ Sepal.Width, type = "scatter",
         mode = "markers", color = iris$Species )
 ```
